@@ -14,7 +14,7 @@ class ProjectController extends Controller
     public function index()
     {
         //
-        $projects = Project::with("type", "technologies")->paginate(5);
+        $projects = Project::with("type", "technologies")->paginate(4);
         foreach ($projects as $project) {
             if ($project->image) {
                 $project->image = url("storage/" . $project->image);
