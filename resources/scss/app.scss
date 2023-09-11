@@ -1,0 +1,14 @@
+@use "../scss/header";
+@use "../scss/main-guest";
+
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+main{
+    width: 100%;
+}

@@ -1,0 +1,46 @@
+#main-guest{
+    .jumbotron{
+        background: #121212;
+        .content-jumbotron{
+            margin-top: 200px;
+            h1{
+                font-size: 60px;
+                width: 15ch;
+                animation: typing 2s steps(15), blink .5s step-end infinite alternate;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 1px solid;
+                font-family: monospace;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: white;
+            }
+            p{
+                font-family: monospace;
+                font-size: 30px;
+                color: white;
+            }     
+        }
+    }
+    .col-6.bg-yellow{
+        background-color: #FED43A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .card-logo{
+            .logo{
+                width: 250px;
+            }
+        }
+    }
+    
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+}
