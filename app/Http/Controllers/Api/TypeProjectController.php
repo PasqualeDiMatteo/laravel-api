@@ -14,7 +14,7 @@ class TypeProjectController extends Controller
     {
         $type = Type::find($id);
         if (!$type) return response(null, 404);
-        $projects = Project::where("type_id", $id)->get();
+        $projects = Project::where("type_id", $id)->with("type", "technologies")->get();
         return response()->json(compact("type", "projects"));
     }
 }
