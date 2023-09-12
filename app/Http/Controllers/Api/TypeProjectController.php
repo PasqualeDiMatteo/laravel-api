@@ -15,6 +15,11 @@ class TypeProjectController extends Controller
         $type = Type::find($id);
         if (!$type) return response(null, 404);
         $projects = Project::where("type_id", $id)->with("type", "technologies")->get();
+        foreach ($projects as $project) {
+            if ($project->image) {
+                $project->image = url("storage/" . $project->image);
+            }
+        }
         return response()->json(compact("type", "projects"));
     }
 }
