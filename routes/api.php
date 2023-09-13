@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\TypeProjectController;
 use Illuminate\Http\Request;
@@ -22,3 +23,6 @@ Route::apiResource("projects", ProjectController::class);
 
 // TypeProject
 Route::get("types/{type}/projects", [TypeProjectController::class, "index"]);
+
+// Contact
+Route::post("/contact-message", [ContactController::class, "message"]);
